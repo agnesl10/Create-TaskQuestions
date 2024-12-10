@@ -31,7 +31,7 @@ Programs accept input to achieve their intended functionality. **Describe at lea
 
 evan: takes a user input of a to do/reminder and creates a card that displays the reminder with a remove button. you can remove the card by clicking the button.
 
-gabe: takes questions from api,
+gabe: takes questions from api, puts it on the screen, answers true or false, checks if its correct, and calculate score.
 
 ### Question 2
 
@@ -40,6 +40,30 @@ Refer to your Personalized Project Reference when answering this question.
 #### Part (a):
 
 Consider the first iteration statement included in the Procedure section of your Personalized Project Reference. **Describe what is being accomplished by the code in the body of the iteration statement.**
+evan:
+
+```Javascript
+for (let i = 0; i < ToDoItems.length; i++) {
+      if (ToDoItems[i] === specificCardText) {
+        ToDoItems.splice(i, 1);
+        break;}}
+```
+
+it loops through the length of the to-do (thats how many times it runs)and when it reaches the a statement of the to-do thing it cut it out of the array and it stops. it removes the card.
+
+gabe:
+
+```Javascript
+for (let i = 0; i < array.length; i++){
+         if (array[i].includes("Correct")) {a++}
+         if (array[i].includes("Incorrect")) {b++}}
+         clear()
+         const correct = a * 100/DOMSelectors.input.value
+         const incorrect = b * 100/DOMSelectors.input.value
+         DOMSelectors.question.insertAdjacentHTML("beforeend", `<h1>You got ${correct}% of them right and ${incorrect}% of them wrong!</h1>`)
+```
+
+it loops through all the array of the questions in i, and calculates the amount marked right and wrong from a function to calculate a percentage for them and then inserts a line to tell you these percentages.
 
 #### Part (b):
 
@@ -47,6 +71,8 @@ Consider the procedure identified in part (i) of the Procedure section of your P
 
 - Write two calls to your procedure that each cause a different code segment in the procedure to execute.
 - Describe the expected behavior of each call. If it is not possible for two calls to your procedure to cause different code segments to execute, explain why this is the case for your procedure.
+
+evan: no matter what i put in its going to find the if theres a match and either add it or remove it.
 
 #### Part (c):
 
@@ -63,3 +89,7 @@ Using the list identified in the List section of your Personalized Project Refer
 ---
 
 ### End of Exam
+
+```
+
+```
